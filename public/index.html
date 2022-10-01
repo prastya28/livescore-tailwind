@@ -1,0 +1,574 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveScore | Live Football Scores</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body class="bg-livescore-bg text-sm max-w-5xl mx-auto">
+
+    <!-- TITLE BAR & TOP MENU -->
+    <nav class="flex justify-between items-center mt-14 mb-5 mx-3 text-gray-200">
+        <div>
+            <a href="#" onclick="toggleSlideover()"><img src="./img/hamburger-menu.svg" alt=""
+                    class="inline-block h-4 mr-6"></a>
+
+            <!-- SLIDEOVER CONTENT -->
+            <div id="slideover-container" class="w-full h-full fixed inset-0 invisible">
+                <div onclick="toggleSlideover()" id="slideover-bg"
+                    class="w-full h-full duration-500 ease-out transition-all inset-0 absolute bg-gray-900 opacity-0">
+                </div>
+                <div onclick="toggleSlideover()" id="slideover"
+                    class="w-72 bg-livescore-item h-full absolute left-0 duration-300 ease-out transition-all -translate-x-full">
+                    <div class="flex justify-between h-20">
+                        <div class="my-auto ml-5">
+                            <img src="./img/livescore-logo.svg" alt="">
+                        </div>
+                        <div class="cursor-pointer text-gray-300 my-auto mr-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="flex text-gray-300 h-10 font-semibold ml-5 mb-2">
+                            <div class="my-auto mr-4"><img src="./img/settings.svg" alt="" class="w-6"></div>
+                            <div class="my-auto">Settings</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="flex text-gray-300 h-10 font-semibold ml-5 mb-2">
+                            <div class="my-auto mr-4"><img src="./img/what-is-new.svg" alt="" class="w-6"></div>
+                            <div class="my-auto">What's new?</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="flex text-gray-300 h-10 font-semibold ml-5 mb-2">
+                            <div class="my-auto mr-4"><img src="./img/faq.svg" alt="" class="w-6"></div>
+                            <div class="my-auto">FAQ</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="flex text-gray-300 h-10 font-semibold ml-5 mb-2">
+                            <div class="my-auto mr-4"><img src="./img/contact-us.svg" alt="" class="w-6"></div>
+                            <div class="my-auto">Contact</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+            <a href="#"><img src="./img/livescore-logo.svg" alt="" class="inline-block"></a>
+        </div>
+        <div>
+            <a href="#" class="text-livescore-active"><img src="./img/football-scores-active.svg" alt=""
+                    class="inline-block h-5 mr-2"> Scores</a>
+        </div>
+        <div>
+            <a href="#"><img src="./img/favourites.svg" alt="" class="inline-block h-5 mr-2"> Favourites</a>
+        </div>
+        <div>
+            <a href="#"><img src="./img/news-article.svg" alt="" class="inline-block h-5 mr-2"> News</a>
+        </div>
+        <div>
+            <a href="#"><img src="./img/download.svg" alt="" class="inline-block h-5 mr-2"> Get the app</a>
+        </div>
+    </nav>
+
+    <!-- LINE -->
+    <div class="border-b border-livescore-border"></div>
+
+    <!-- SPORTS MENU -->
+    <div class="flex text-gray-200 mt-4 mx-3 space-x-3">
+        <a href="#" class="bg-gray-100 text-livescore-item py-2 px-3 rounded-full">Football</a>
+        <a href="#" class="bg-livescore-item py-2 px-3 rounded-full">Hockey</a>
+        <a href="#" class="bg-livescore-item py-2 px-3 rounded-full">Basketball</a>
+        <a href="#" class="bg-livescore-item py-2 px-3 rounded-full">Tennis</a>
+        <a href="#" class="bg-livescore-item py-2 px-3 rounded-full">Cricket</a>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="flex text-gray-300 mt-4 gap-5 mx-3">
+
+        <!-- LEFT SIDEBAR -->
+        <div class="w-48">
+            <div class="flex h-auto border border-livescore-border rounded-t-lg p-5">
+                <img src="./img/mobile-search.svg" alt="">
+                <input type="text" name="search" id="" placeholder="Search..."
+                    class="block w-full bg-livescore-bg ml-3 focus:outline-none focus:ring-0">
+            </div>
+            <div class="h-auto border border-t-0 border-livescore-border p-5">
+                <div class="mb-2">
+                    <a href="#">
+                        <img src="./img/nation/england.jpg" alt="" class="inline-block h-3 mr-2">
+                        <span>England</span>
+                    </a>
+                </div>
+                <div class="mb-2">
+                    <a href="#">
+                        <img src="./img/nation/spain.jpg" alt="" class="inline-block h-3 mr-2">
+                        <span>Spain</span>
+                    </a>
+                </div>
+                <div class="mb-2">
+                    <a href="#">
+                        <img src="./img/nation/italy.jpg" alt="" class="inline-block h-3 mr-2">
+                        <span>Italy</span>
+                    </a>
+                </div>
+                <div class="mb-2">
+                    <a href="#">
+                        <img src="./img/nation/germany.jpg" alt="" class="inline-block h-3 mr-2">
+                        <span>Germany</span>
+                    </a>
+                </div>
+                <div class="mb-2">
+                    <a href="#">
+                        <img src="./img/nation/france.jpg" alt="" class="inline-block h-3 mr-2">
+                        <span>France</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="./img/nation/holland.jpg" alt="" class="inline-block h-3 mr-2">
+                        <span>Netherlands</span>
+                    </a>
+                </div>
+            </div>
+            <div class="h-auto border border-t-0 border-livescore-border rounded-b-lg p-1 text-center">
+                <a href="#">See All</a>
+            </div>
+        </div>
+
+        <!-- MAIN -->
+        <div class="flex-auto">
+            <div class="flex border border-livescore-border rounded-t-lg justify-between align-middle uppercase">
+                <a href="#">
+                    <img src="./img/live.svg" alt="" class="h-6 ml-5 my-4">
+                </a>
+                <a href="#">
+                    <div class="flex flex-col text-center text-xxs my-4">
+                        <span>Fri</span>
+                        <span class="">29 Sep</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="flex flex-col text-center text-xxs my-4">
+                        <span>Sat</span>
+                        <span class="">30 Sep</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="flex flex-col text-center text-xxs my-4 text-livescore-active font-semibold">
+                        <span>Today</span>
+                        <span class="">01 Oct</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="flex flex-col text-center text-xxs my-4">
+                        <span>Mon</span>
+                        <span class="">02 Oct</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="flex flex-col text-center text-xxs my-4">
+                        <span>Tue</span>
+                        <span class="">03 Oct</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="./img/calendar.svg" alt="" class="h-6 mr-5 my-4">
+                </a>
+            </div>
+            <div class="h-auto border-x rounded-lg rounded-t-none border-livescore-border p-2">
+                <div class="flex justify-between">
+                    <a href="#">
+                        <div class="flex">
+                            <div class="my-auto ml-2">
+                                <img src="./img/nation/england.jpg" alt="" class="h-3 mr-2">
+                            </div>
+                            <div class="my-auto ml-1">
+                                <div class="text-sm font-semibold">Premier League</div>
+                                <span class="text-xxs">England</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="my-auto mr-2">
+                        <div>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-4 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full">
+                        <div class="flex">
+                            <div class="opacity-0 w-1 rounded-r"></div>
+                            <div class="my-auto w-5 ml-5 text-center">FT</div>
+                            <div class="ml-5">
+                                <div>Arsenal</div>
+                                <div>Tottenham Hotspur</div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4">
+                            <div>3</div>
+                            <div>1</div>
+                        </div>
+                    </a>
+                    <div class="my-auto opacity-50">
+                        <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                    </div>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full">
+                        <div class="flex">
+                            <div class="bg-livescore-active w-1 rounded-r"></div>
+                            <div class="my-auto w-5 ml-5 text-center font-bold text-livescore-active">69'</div>
+                            <div class="ml-5">
+                                <div>AFC Bournemouth</div>
+                                <div>Brentford</div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4">
+                            <div>0</div>
+                            <div>0</div>
+                        </div>
+                    </a>
+                    <div class="my-auto">
+                        <a href="#">
+                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                        </a>
+                    </div>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full">
+                        <div class="flex">
+                            <div class="bg-livescore-active w-1 rounded-r"></div>
+                            <div class="my-auto w-5 ml-5 text-center font-bold text-livescore-active">69'</div>
+                            <div class="ml-5">
+                                <div>Crystal Palace</div>
+                                <div>Chelsea</div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4">
+                            <div>1</div>
+                            <div>1</div>
+                        </div>
+                    </a>
+                    <div class="my-auto">
+                        <a href="#">
+                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                        </a>
+                    </div>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full">
+                        <div class="flex">
+                            <div class="bg-livescore-active w-1 rounded-r"></div>
+                            <div class="my-auto w-5 ml-5 text-center font-bold text-livescore-active">69'</div>
+                            <div class="ml-5">
+                                <div>Fulham</div>
+                                <div>Newcastle United</div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4">
+                            <div>0</div>
+                            <div>3</div>
+                        </div>
+                    </a>
+                    <div class="my-auto">
+                        <a href="#">
+                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                        </a>
+                    </div>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full">
+                        <div class="flex">
+                            <div class="bg-livescore-active w-1 rounded-r"></div>
+                            <div class="my-auto w-5 ml-5 text-center font-bold text-livescore-active">69'</div>
+                            <div class="ml-5">
+                                <div>Liverpool</div>
+                                <div>Brighton & Hove Albion</div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4">
+                            <div>1</div>
+                            <div>2</div>
+                        </div>
+                    </a>
+                    <div class="my-auto">
+                        <a href="#">
+                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                        </a>
+                    </div>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full">
+                        <div class="flex">
+                            <div class="bg-livescore-active w-1 rounded-r"></div>
+                            <div class="my-auto w-5 ml-5 text-center font-bold text-livescore-active">69'</div>
+                            <div class="ml-5">
+                                <div>Southampton</div>
+                                <div>Everton</div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4">
+                            <div>1</div>
+                            <div>1</div>
+                        </div>
+                    </a>
+                    <div class="my-auto">
+                        <a href="#">
+                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-auto border border-t-0 rounded-lg rounded-t-none border-livescore-border p-2">
+                <div class="flex justify-between">
+                    <a href="#">
+                        <div class="flex">
+                            <div class="my-auto ml-2">
+                                <img src="./img/nation/italy.jpg" alt="" class="h-3 mr-2">
+                            </div>
+                            <div class="my-auto ml-1">
+                                <div class="text-sm font-semibold">Serie A</div>
+                                <span class="text-xxs">Italy</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="my-auto mr-2">
+                        <div>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-4 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full">
+                        <div class="flex">
+                            <div class="bg-livescore-active w-1 rounded-r"></div>
+                            <div class="my-auto w-5 ml-5 text-center font-bold text-livescore-active">69'</div>
+                            <div class="ml-5">
+                                <div>Empoli</div>
+                                <div>AC Milan</div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4">
+                            <div>3</div>
+                            <div>1</div>
+                        </div>
+                    </a>
+                    <div class="my-auto">
+                        <a href="#">
+                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                        </a>
+                    </div>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full">
+                        <div class="flex">
+                            <div class="opacity-0 w-1 rounded-r"></div>
+                            <div class="my-auto w-5 ml-5 text-center text-xs">17:30</div>
+                            <div class="ml-5">
+                                <div>Lazio</div>
+                                <div>Spezia</div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </a>
+                    <div class="my-auto">
+                        <a href="#">
+                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                        </a>
+                    </div>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full">
+                        <div class="flex">
+                            <div class="opacity-0 w-1 rounded-r"></div>
+                            <div class="my-auto w-5 ml-5 text-center text-xs">17:30</div>
+                            <div class="ml-5">
+                                <div>Lecce</div>
+                                <div>Cremonense</div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </a>
+                    <div class="my-auto">
+                        <a href="#">
+                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                        </a>
+                    </div>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full">
+                        <div class="flex">
+                            <div class="opacity-0 w-1 rounded-r"></div>
+                            <div class="my-auto w-5 ml-5 text-center text-xs">17:30</div>
+                            <div class="ml-5">
+                                <div>Sampdoria</div>
+                                <div>Monza</div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </a>
+                    <div class="my-auto">
+                        <a href="#">
+                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                        </a>
+                    </div>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full">
+                        <div class="flex">
+                            <div class="opacity-0 w-1 rounded-r"></div>
+                            <div class="my-auto w-5 ml-5 text-center text-xs">17:30</div>
+                            <div class="ml-5">
+                                <div>Sassuolo</div>
+                                <div>Salermitana</div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </a>
+                    <div class="my-auto">
+                        <a href="#">
+                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+        <div class="w-72">
+            <a href="#">
+                <div class="flex h-auto justify-between border border-livescore-border rounded-t-lg p-5">
+                    <div class="font-semibold">Featured News</div>
+                    <div>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+            </a>
+            <div class="h-auto border border-t-0 rounded-lg rounded-t-none border-livescore-border p-2">
+
+                <div class="rounded-lg relative m-1 mb-4 overflow-hidden">
+                    <a href="#">
+                        <img alt="eggs" src="./img/news/01.jpg" class="rounded-lg" />
+                        <div
+                            class="absolute bg-gradient-to-b bg-opacity-60 from-transparent to-black w-full p-4 bottom-0">
+                            <div class="flex justify-between font-bold">
+                                <p>Arsenal 3-1 Tottenham: Brilliant Gunners beat 10-man Spurs to go four points clear
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="rounded-lg relative m-1 mb-4 overflow-hidden">
+                    <a href="#">
+                        <img alt="eggs" src="./img/news/02.jpg" class="rounded-lg" />
+                        <div
+                            class="absolute bg-gradient-to-b bg-opacity-60 from-transparent to-black w-full p-4 bottom-0">
+                            <div class="flex justify-between font-bold">
+                                <p>Liverpool 3-3 Brighton and Hove Albion: Trossard hat-trick denies Reds in Anfield
+                                    thriller
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="rounded-lg relative m-1 mb-4 overflow-hidden">
+                    <a href="#">
+                        <img alt="eggs" src="./img/news/03.jpg" class="rounded-lg" />
+                        <div
+                            class="absolute bg-gradient-to-b bg-opacity-60 from-transparent to-black w-full p-4 bottom-0">
+                            <div class="flex justify-between font-bold">
+                                <p>Crystal Palace 1-2 Chelsea: Late Gallagher strike gives Potter winning league start
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="rounded-lg relative m-1 overflow-hidden">
+                    <a href="#">
+                        <img alt="eggs" src="./img/news/04.jpg" class="rounded-lg" />
+                        <div
+                            class="absolute bg-gradient-to-b bg-opacity-60 from-transparent to-black w-full p-4 bottom-0">
+                            <div class="flex justify-between font-bold">
+                                <p>Stat Attack: All you need to know about Fulham 1-4 Newcastle
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border border-livescore-border rounded-lg mt-5">
+                <img src="./img/cristianoRonaldo.svg" alt="" class="w-32 mx-auto my-6">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="mt-5">
+        <div class="text-gray-300 text-xs font-semibold text-center">
+            Welcome To LiveScore - Latest Football Live Scores, Results, Fixtures and Tables
+        </div>
+        <div class="text-gray-300 text-xs text-center mt-1">
+            The number one destination for real time scores for Football, Cricket, Tennis, Basketball, Hockey and more.
+            LiveScore.com is the go-to destination for latest football scores and news from around the world. Whether
+            you’re after today’s results, fixtures or live updates as the goals fly in, all the top leagues and
+            competitions are covered in unbeatable detail. We provide fixtures, live scores, results and tables from the
+            Premier League, Serie A, LaLiga, the Bundesliga, Ligue 1 and other top tournaments such as the Champions
+            League and Europa League. But that’s not all because domestic cup competitions including the world famous FA
+            Cup and international tournaments such as the World Cup and Nations League are also at your fingertips. With
+            match info and line-ups thrown into the mix, you won’t need to look anywhere else for football stats. Users
+            in the UK and Ireland can get stuck in with our live streaming service, offering matches from Serie A, the
+            Eredivisie and other top leagues, while anyone in Nigeria can enjoy our net-busting live coverage of the
+            Premier League.
+        </div>
+        <div class="text-gray-300 text-xs text-center mt-1">
+            Links: <a href="#" class="underline">English Premier League</a>, <a href="#" class="underline">La Liga</a>,
+            <a href="#" class="underline">Serie
+                A</a>, <a href="#" class="underline">Bundesliga</a>, <a href="#" class="underline">Ligue 1</a>, <a
+                href="#" class="underline">Champions League</a>.
+        </div>
+        <div class="text-gray-500 text-xs text-center mt-1">
+            © 1998-2022 LiveScore
+        </div>
+        <div class="text-gray-400 text-xxs text-center mt-2">
+            <a href="#">Careers</a> | <a href="#">Mobile</a> | <a href="#">Advertise</a> | Faq <a href="#">Contact</a> |
+            <a href="#">News Publishers</a> | <a href="#">Privacy Notice</a> | <a href="#">Cookie Policy</a> | <a
+                href="#">Terms of Use</a> | <a href="#">Corporate</a>
+        </div>
+    </div>
+
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
