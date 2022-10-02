@@ -64,9 +64,33 @@
                             <div class="my-auto">Contact</div>
                         </div>
                     </a>
+                    <div class="absolute inset-x-0 bottom-0">
+                        <div class="flex h-20 px-5">
+                            <div class="my-auto">
+                                <img src="./img/ls-logo-short.svg" alt="">
+                            </div>
+                            <div class="text-xs font-semibold ml-4 my-auto">Get instant notifications with the LiveScore
+                                app
+                            </div>
+                        </div>
+                        <div class="flex h-20 px-5">
+                            <div class="my-auto">
+                                <a href="#">
+                                    <img src="./img/app_store.webp" alt="">
+                                </a>
+                            </div>
+                            <div class="my-auto ml-4">
+                                <a href="#">
+                                    <img src="./img/google_play.webp" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="h-32 px-5 mt-5">
+                            <img src="./img/cristianoRonaldo.svg" alt="" class="w-32 mx-auto">
+                        </div>
+                    </div>
                 </div>
             </div>
-
 
             <a href="#"><img src="./img/livescore-logo.svg" alt="" class="inline-block"></a>
         </div>
@@ -101,13 +125,13 @@
     <div class="flex text-gray-300 mt-4 gap-5 mx-3">
 
         <!-- LEFT SIDEBAR -->
-        <div class="w-48">
+        <div class="w-52">
             <div class="flex h-auto border border-livescore-border rounded-t-lg p-5">
                 <img src="./img/mobile-search.svg" alt="">
                 <input type="text" name="search" id="" placeholder="Search..."
                     class="block w-full bg-livescore-bg ml-3 focus:outline-none focus:ring-0">
             </div>
-            <div class="h-auto border border-t-0 border-livescore-border p-5">
+            <div class="h-auto text-sm border border-t-0 border-livescore-border py-3 pl-5">
                 <div class="mb-2">
                     <a href="#">
                         <img src="./img/nation/england.jpg" alt="" class="inline-block h-3 mr-2">
@@ -138,10 +162,34 @@
                         <span>France</span>
                     </a>
                 </div>
-                <div>
+                <div class="mb-2">
                     <a href="#">
                         <img src="./img/nation/holland.jpg" alt="" class="inline-block h-3 mr-2">
                         <span>Netherlands</span>
+                    </a>
+                </div>
+                <div class="mb-2">
+                    <a href="#">
+                        <img src="./img/comp/champions-league.png" alt="" class="inline-block w-5 mr-2">
+                        <span>Champions League</span>
+                    </a>
+                </div>
+                <div class="mb-2">
+                    <a href="#">
+                        <img src="./img/comp/europa-league.png" alt="" class="inline-block w-5 mr-2">
+                        <span>Europa League</span>
+                    </a>
+                </div>
+                <div class="mb-2">
+                    <a href="#">
+                        <img src="./img/comp/world-cup.png" alt="" class="inline-block w-5 mr-2">
+                        <span>World Cup</span>
+                    </a>
+                </div>
+                <div class="mb-2">
+                    <a href="#">
+                        <img src="./img/comp/intl.jpg" alt="" class="inline-block w-5 mr-2">
+                        <span>International</span>
                     </a>
                 </div>
             </div>
@@ -190,7 +238,9 @@
                     <img src="./img/calendar.svg" alt="" class="h-6 mr-5 my-4">
                 </a>
             </div>
-            <div class="h-auto border-x rounded-lg rounded-t-none border-livescore-border p-2">
+
+            <!-- EPL -->
+            <div class="h-auto border-x border-livescore-border p-2">
                 <div class="flex justify-between">
                     <a href="#">
                         <div class="flex">
@@ -210,16 +260,22 @@
                     </a>
                 </div>
                 <div class="flex space-x-5 pr-2 py-3 mt-4 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
-                    <a href="#" class="flex justify-between w-full">
+                    <a href="#" class="flex justify-between w-full h-12">
                         <div class="flex">
                             <div class="opacity-0 w-1 rounded-r"></div>
-                            <div class="my-auto w-5 ml-5 text-center">FT</div>
-                            <div class="ml-5">
-                                <div>Arsenal</div>
-                                <div>Tottenham Hotspur</div>
+                            <div class="my-auto w-7 ml-5 text-center">FT</div>
+                            <div class="ml-5 space-y-1 my-auto">
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/arsenal.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Arsenal</div>
+                                </div>
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/tottenham.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Tottenham Hotspur</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center font-bold w-4">
+                        <div class="text-center font-bold w-4 space-y-1 my-auto">
                             <div>3</div>
                             <div>1</div>
                         </div>
@@ -229,16 +285,22 @@
                     </div>
                 </div>
                 <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
-                    <a href="#" class="flex justify-between w-full">
+                    <a href="#" class="flex justify-between w-full h-12">
                         <div class="flex">
                             <div class="bg-livescore-active w-1 rounded-r"></div>
-                            <div class="my-auto w-5 ml-5 text-center font-bold text-livescore-active">69'</div>
-                            <div class="ml-5">
-                                <div>AFC Bournemouth</div>
-                                <div>Brentford</div>
+                            <div class="my-auto w-7 ml-5 text-center font-bold text-livescore-active">69'</div>
+                            <div class="ml-5 space-y-1 my-auto">
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/bournemouth.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>AFC Bournemouth</div>
+                                </div>
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/brentford.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Brentford</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center font-bold w-4">
+                        <div class="text-center font-bold w-4 space-y-1 my-auto">
                             <div>0</div>
                             <div>0</div>
                         </div>
@@ -250,16 +312,22 @@
                     </div>
                 </div>
                 <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
-                    <a href="#" class="flex justify-between w-full">
+                    <a href="#" class="flex justify-between w-full h-12">
                         <div class="flex">
                             <div class="bg-livescore-active w-1 rounded-r"></div>
-                            <div class="my-auto w-5 ml-5 text-center font-bold text-livescore-active">69'</div>
-                            <div class="ml-5">
-                                <div>Crystal Palace</div>
-                                <div>Chelsea</div>
+                            <div class="my-auto w-7 ml-5 text-center font-bold text-livescore-active">69'</div>
+                            <div class="ml-5 space-y-1 my-auto">
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/crystal_palace.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Crystal Palace</div>
+                                </div>
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/chelsea.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Chelsea</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center font-bold w-4">
+                        <div class="text-center font-bold w-4 space-y-1 my-auto">
                             <div>1</div>
                             <div>1</div>
                         </div>
@@ -271,16 +339,22 @@
                     </div>
                 </div>
                 <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
-                    <a href="#" class="flex justify-between w-full">
+                    <a href="#" class="flex justify-between w-full h-12">
                         <div class="flex">
                             <div class="bg-livescore-active w-1 rounded-r"></div>
-                            <div class="my-auto w-5 ml-5 text-center font-bold text-livescore-active">69'</div>
-                            <div class="ml-5">
-                                <div>Fulham</div>
-                                <div>Newcastle United</div>
+                            <div class="my-auto w-7 ml-5 text-center font-bold text-livescore-active">69'</div>
+                            <div class="ml-5 space-y-1 my-auto">
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/fulham.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Fulham</div>
+                                </div>
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/newcastle.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Newcastle United</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center font-bold w-4">
+                        <div class="text-center font-bold w-4 space-y-1 my-auto">
                             <div>0</div>
                             <div>3</div>
                         </div>
@@ -292,16 +366,22 @@
                     </div>
                 </div>
                 <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
-                    <a href="#" class="flex justify-between w-full">
+                    <a href="#" class="flex justify-between w-full h-12">
                         <div class="flex">
                             <div class="bg-livescore-active w-1 rounded-r"></div>
-                            <div class="my-auto w-5 ml-5 text-center font-bold text-livescore-active">69'</div>
-                            <div class="ml-5">
-                                <div>Liverpool</div>
-                                <div>Brighton & Hove Albion</div>
+                            <div class="my-auto w-7 ml-5 text-center font-bold text-livescore-active">69'</div>
+                            <div class="ml-5 space-y-1 my-auto">
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/liverpool.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Liverpool</div>
+                                </div>
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/brighton.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Brighton & Hove Albion</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center font-bold w-4">
+                        <div class="text-center font-bold w-4 space-y-1 my-auto">
                             <div>1</div>
                             <div>2</div>
                         </div>
@@ -313,16 +393,22 @@
                     </div>
                 </div>
                 <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
-                    <a href="#" class="flex justify-between w-full">
+                    <a href="#" class="flex justify-between w-full h-12">
                         <div class="flex">
                             <div class="bg-livescore-active w-1 rounded-r"></div>
-                            <div class="my-auto w-5 ml-5 text-center font-bold text-livescore-active">69'</div>
-                            <div class="ml-5">
-                                <div>Southampton</div>
-                                <div>Everton</div>
+                            <div class="my-auto w-7 ml-5 text-center font-bold text-livescore-active">69'</div>
+                            <div class="ml-5 space-y-1 my-auto">
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/southampton.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Southampton</div>
+                                </div>
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/everton.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Everton</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center font-bold w-4">
+                        <div class="text-center font-bold w-4 space-y-1 my-auto">
                             <div>1</div>
                             <div>1</div>
                         </div>
@@ -335,7 +421,8 @@
                 </div>
             </div>
 
-            <div class="h-auto border border-t-0 rounded-lg rounded-t-none border-livescore-border p-2">
+            <!-- SERIE A -->
+            <div class="h-auto border border-y-0 border-livescore-border p-2">
                 <div class="flex justify-between">
                     <a href="#">
                         <div class="flex">
@@ -355,37 +442,204 @@
                     </a>
                 </div>
                 <div class="flex space-x-5 pr-2 py-3 mt-4 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
-                    <a href="#" class="flex justify-between w-full">
+                    <a href="#" class="flex justify-between w-full h-12">
                         <div class="flex">
                             <div class="bg-livescore-active w-1 rounded-r"></div>
-                            <div class="my-auto w-5 ml-5 text-center font-bold text-livescore-active">69'</div>
-                            <div class="ml-5">
-                                <div>Empoli</div>
-                                <div>AC Milan</div>
+                            <div class="my-auto w-7 ml-5 text-center font-bold text-livescore-active">69'</div>
+                            <div class="ml-5 space-y-1 my-auto">
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/empoli.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Empoli</div>
+                                </div>
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/acmilan.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>AC Milan</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center font-bold w-4">
+                        <div class="text-center font-bold w-4 space-y-1 my-auto">
+                            <div>1</div>
                             <div>3</div>
+                        </div>
+                    </a>
+                    <div class="my-auto">
+                        <a href="#">
+                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                        </a>
+                    </div>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full h-12">
+                        <div class="flex">
+                            <div class="opacity-0 w-1 rounded-r"></div>
+                            <div class="my-auto w-7 ml-5 text-center text-xs">17:30</div>
+                            <div class="ml-5 space-y-1 my-auto">
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/lazio.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Lazio</div>
+                                </div>
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/spezia.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Spezia</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4 space-y-1 my-auto">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </a>
+                    <div class="my-auto">
+                        <a href="#">
+                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                        </a>
+                    </div>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full h-12">
+                        <div class="flex">
+                            <div class="opacity-0 w-1 rounded-r"></div>
+                            <div class="my-auto w-7 ml-5 text-center text-xs">17:30</div>
+                            <div class="ml-5 space-y-1 my-auto">
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/lecce.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Lecce</div>
+                                </div>
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/cremonense.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Cremonense</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4 space-y-1 my-auto">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </a>
+                    <div class="my-auto">
+                        <a href="#">
+                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                        </a>
+                    </div>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full h-12">
+                        <div class="flex">
+                            <div class="opacity-0 w-1 rounded-r"></div>
+                            <div class="my-auto w-7 ml-5 text-center text-xs">17:30</div>
+                            <div class="ml-5 space-y-1 my-auto">
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/sampdoria.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Sampdoria</div>
+                                </div>
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/monza.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Monza</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4 space-y-1 my-auto">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </a>
+                    <div class="my-auto">
+                        <a href="#">
+                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                        </a>
+                    </div>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full h-12">
+                        <div class="flex">
+                            <div class="opacity-0 w-1 rounded-r"></div>
+                            <div class="my-auto w-7 ml-5 text-center text-xs">17:30</div>
+                            <div class="ml-5 space-y-1 my-auto">
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/sassuolo.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Sassuolo</div>
+                                </div>
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/salernitana.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Salernitana</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4 space-y-1 my-auto">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </a>
+                    <div class="my-auto">
+                        <a href="#">
+                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LA LIGA -->
+            <div class="h-auto border border-t-0 rounded-lg rounded-t-none border-livescore-border p-2">
+                <div class="flex justify-between">
+                    <a href="#">
+                        <div class="flex">
+                            <div class="my-auto ml-2">
+                                <img src="./img/nation/spain.jpg" alt="" class="h-3 mr-2">
+                            </div>
+                            <div class="my-auto ml-1">
+                                <div class="text-sm font-semibold">LaLiga Santander</div>
+                                <span class="text-xxs">Spain</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="my-auto mr-2">
+                        <div>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex space-x-5 pr-2 py-3 mt-4 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
+                    <a href="#" class="flex justify-between w-full h-12">
+                        <div class="flex">
+                            <div class="opacity-0 w-1 rounded-r"></div>
+                            <div class="my-auto w-7 ml-5 text-center">FT</div>
+                            <div class="ml-5 space-y-1 my-auto">
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/mallorca.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Mallorca</div>
+                                </div>
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/barcelona.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Barcelona</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center font-bold w-4 space-y-1 my-auto">
+                            <div>0</div>
                             <div>1</div>
                         </div>
                     </a>
-                    <div class="my-auto">
-                        <a href="#">
-                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
-                        </a>
+                    <div class="my-auto opacity-50">
+                        <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
                     </div>
                 </div>
                 <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
-                    <a href="#" class="flex justify-between w-full">
+                    <a href="#" class="flex justify-between w-full h-12">
                         <div class="flex">
                             <div class="opacity-0 w-1 rounded-r"></div>
-                            <div class="my-auto w-5 ml-5 text-center text-xs">17:30</div>
-                            <div class="ml-5">
-                                <div>Lazio</div>
-                                <div>Spezia</div>
+                            <div class="my-auto w-7 ml-5 text-center text-xs">17:30</div>
+                            <div class="ml-5 space-y-1 my-auto">
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/espanyol.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Espanyol</div>
+                                </div>
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/valencia.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Valencia</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center font-bold w-4">
+                        <div class="text-center font-bold w-4 space-y-1 my-auto">
                             <div></div>
                             <div></div>
                         </div>
@@ -397,16 +651,22 @@
                     </div>
                 </div>
                 <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
-                    <a href="#" class="flex justify-between w-full">
+                    <a href="#" class="flex justify-between w-full h-12">
                         <div class="flex">
                             <div class="opacity-0 w-1 rounded-r"></div>
-                            <div class="my-auto w-5 ml-5 text-center text-xs">17:30</div>
-                            <div class="ml-5">
-                                <div>Lecce</div>
-                                <div>Cremonense</div>
+                            <div class="my-auto w-7 ml-5 text-center text-xs">17:30</div>
+                            <div class="ml-5 space-y-1 my-auto">
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/celta_vigo.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Celta Vigo</div>
+                                </div>
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/real_betis.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Real Betis</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center font-bold w-4">
+                        <div class="text-center font-bold w-4 space-y-1 my-auto">
                             <div></div>
                             <div></div>
                         </div>
@@ -418,37 +678,22 @@
                     </div>
                 </div>
                 <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
-                    <a href="#" class="flex justify-between w-full">
+                    <a href="#" class="flex justify-between w-full h-12">
                         <div class="flex">
                             <div class="opacity-0 w-1 rounded-r"></div>
-                            <div class="my-auto w-5 ml-5 text-center text-xs">17:30</div>
-                            <div class="ml-5">
-                                <div>Sampdoria</div>
-                                <div>Monza</div>
+                            <div class="my-auto w-7 ml-5 text-center text-xs">17:30</div>
+                            <div class="ml-5 space-y-1 my-auto">
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/girona.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Girona</div>
+                                </div>
+                                <div class="flex h-5">
+                                    <div><img src="./img/club/real_sociedad.png" alt="" class="w-5 mr-2.5"></div>
+                                    <div>Real Sociedad</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center font-bold w-4">
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </a>
-                    <div class="my-auto">
-                        <a href="#">
-                            <img src="./img/favourites.svg" alt="" class="h-6 mr-3">
-                        </a>
-                    </div>
-                </div>
-                <div class="flex space-x-5 pr-2 py-3 mt-2 bg-livescore-item rounded-md hover:bg-livescore-item-hover">
-                    <a href="#" class="flex justify-between w-full">
-                        <div class="flex">
-                            <div class="opacity-0 w-1 rounded-r"></div>
-                            <div class="my-auto w-5 ml-5 text-center text-xs">17:30</div>
-                            <div class="ml-5">
-                                <div>Sassuolo</div>
-                                <div>Salermitana</div>
-                            </div>
-                        </div>
-                        <div class="text-center font-bold w-4">
+                        <div class="text-center font-bold w-4 space-y-1 my-auto">
                             <div></div>
                             <div></div>
                         </div>
