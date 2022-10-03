@@ -10,7 +10,7 @@ Updated at **_Oct, 2nd 2022_**
 
 Demo: [https://prastya.my.id/demo/livescore-tailwind](https://prastya.my.id/demo/livescore-tailwind/)
 
-![Screenshot / Oct, 2nd 2022](https://github.com/prastya28/livescore-tailwind/blob/main/public/img/ss_01.png)
+![Screenshot / Oct, 2nd 2022](https://github.com/prastya28/livescore-tailwind/blob/main/public/img/ss_02.png)
 
 ### Credits
 
